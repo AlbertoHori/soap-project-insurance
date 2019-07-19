@@ -1,0 +1,21 @@
+<InsuranceRequest xmlns="http://www.nicordesigns.com/spring-ws-insurance">
+
+    <Applicant>
+        <SSN>421-12-444</SSN>
+        <FirstName>Sara</FirstName>
+        <MiddleName></MiddleName>
+        <LastName>Bodeep</LastName>
+    </Applicant>
+
+    <InsuranceInfo>
+        <product>Widget Gold Insurance</product>
+        <coverageType>Widget Protector</coverageType>
+        <coverageOption>Widget Value</coverageOption>
+    </InsuranceInfo>
+
+    <WidgetInfo>
+        <wgtAmount>5000.00</wgtAmount>
+        <wgtContractNumber>300100000234</wgtContractNumber>
+    </WidgetInfo>
+
+</InsuranceRequest>
