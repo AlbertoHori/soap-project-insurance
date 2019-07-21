@@ -26,9 +26,10 @@ public class InsuranceWSEndpoint {
     public InsuranceResponse InsuranceApplication(@RequestPayload InsuranceRequest insuranceApplicationRequest) throws Exception {
         if (insuranceApplicationRequest != null) {
         	//Imprime o seguro recebido
+        	//Persiste o seguro 
             insuranceService.writeInsuranceApplication(insuranceApplicationRequest);
         }
-        //Persiste o seguro via hardcode
+        //de qualquer forma foi processado
         return insuranceService.processInsuranceApplication(insuranceApplicationRequest);
     }
 }

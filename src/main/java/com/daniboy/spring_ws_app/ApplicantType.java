@@ -62,7 +62,7 @@ public class ApplicantType {
      *     {@link String }
      *     
      */
-    public String getSSN() {
+    public String getSsn() {
         return ssn;
     }
 
@@ -74,7 +74,7 @@ public class ApplicantType {
      *     {@link String }
      *     
      */
-    public void setSSN(String value) {
+    public void setSsn(String value) {
         this.ssn = value;
     }
 

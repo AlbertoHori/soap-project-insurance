@@ -15,7 +15,7 @@ public class InsuranceServiceImpl implements InsuranceService{
         ApplicantType applicantType = insuranceRequest.getApplicant();
         System.out.println("Insurance Applicant: First Name " + applicantType.getFirstName() );
         System.out.println("Insurance Applicant: Last Name " + applicantType.getLastName() );
-        System.out.println("Insurance Applicant: SSN " + applicantType.getSSN() );
+        System.out.println("Insurance Applicant: SSN " + applicantType.getSsn() );
 
 
         WidgetInfoType widgetInfo = insuranceRequest.getWidgetInfo();
@@ -37,9 +37,11 @@ public class InsuranceServiceImpl implements InsuranceService{
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = dateFormat.format(calendar.getTime());
         System.out.println(formattedDate);
+        
+        //persiste o seguro e retorna pro usuário a data e valor do processo
 
         insuranceResponse.setConfirmationId("1");
-        insuranceResponse.setAmount("500.00");
+        insuranceResponse.setAmount(insuranceRequest.getWidgetInfo().getWgtAmount());
         insuranceResponse.setOrderDate(formattedDate);
         return insuranceResponse;
     }
